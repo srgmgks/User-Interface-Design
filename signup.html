@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel = "icon" href ="https://amrita.edu/wp-content/uploads/2019/05/amrita-new-favicon.ico" type = "image/x-icon">
+</head>
+
+<body style="font-size: 20px;" onload="init();">
+	<br><br>
+	<center><img src="1.png" height="168" width="613"></img>
+	<br><br>
+		<form action="signup.php" method="POST">
+			<table>
+				<td>
+                    <center><div id="C1"><b style="font-size: 30px;">Sign Up</b><br><br></div></center>
+                </td>
+				<tr>
+					<td>
+						<label for="uname"><b>Name</b></label>
+						<br>
+						<input type="text" placeholder="Enter Full Name" name="uname" id="uname" required pattern="[A-Za-z0-9]+{3,}">
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="email"><b>Email</b></label>
+						<br>
+						<input type="email" placeholder="Enter Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="psw"><b>Password</b></label>
+						<br>
+						<input type="password" minlength="8" placeholder="Enter Password" name="psw" id="psw" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$">
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="course"><b>Course</b></label>
+						<br>
+						<select id="course" name="course" style="width: 85%" required>
+							<option value="">Select your Course</option>
+						</select>
+						<!---<input type="password" placeholder="Enter Course" name="course" id="course" required pattern="[a-zA-Z0-9]{3,}$">--->
+						<br>
+					</td>
+				</tr>
+		</table>
+		<br>
+			<button type="submit" name="submit" value="submit">Sign Up</button>
+            <button type="reset">Reset</button>
+			<br><br>
+	</form>
+	<form action="index.html" method="GET">
+		<button type="submit" name="login" value="login">Login</button>
+	</form>
+	<br><br>
+	</center>
+	<style>
+		input[type=text], input[type=password], input[type=tel], input[type=date],input[type=email],option,select {
+			width: 50%;
+			padding: 15px;
+			margin: 15px;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=email]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+		button[name='login']{
+			background-color: rgb(52, 52, 211);
+		}
+		button{
+			background-color: #df38d1;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 15px;
+			text-align: center;
+		}
+		html { 
+			background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		td{
+			width: 300px;
+		}
+		table{
+			background-color: rgb(110, 218, 137);
+			opacity: 0.90;
+			border-radius: 10px;
+			padding: 15px;
+		}
+	</style>
+	<script>
+		var email = document.getElementById("email");
+		email.addEventListener('input', () => {
+		email.setCustomValidity('');
+		email.checkValidity();
+		});
+		email.addEventListener('invalid', () => {
+		if(email.value === '') {
+			email.setCustomValidity('Enter Email');
+			alert("Please Enter Email");
+		} else {
+			email.setCustomValidity('Enter Email in this format: abc@example.com');
+		}
+		});
+		var uname = document.getElementById("uname");
+        uname.addEventListener('input', () => {
+        uname.setCustomValidity('');
+        uname.checkValidity();
+        });
+        uname.addEventListener('invalid', () => {
+        if(uname.value === '') {
+            uname.setCustomValidity('Enter Full Name');
+            alert("Please Enter Name");
+        }
+        });
+		var psw = document.getElementById("psw");
+        psw.addEventListener('input', () => {
+        psw.setCustomValidity('');
+        psw.checkValidity();
+        });
+        psw.addEventListener('invalid', () => {
+        if(psw.value === '') {
+            psw.setCustomValidity('Enter Password');
+            alert("Please Enter Password");
+        }
+        });
+		/*var course = document.getElementById("course");
+        course.addEventListener('input', () => {
+		course.setCustomValidity('');
+        course.checkValidity();
+        });
+        course.addEventListener('invalid', () => {
+        if(course.value === '') {
+            course.setCustomValidity('Enter Course');
+            alert("Please Enter Course");
+        }
+        });*/
+		var course = document.querySelector("#course");
+        function init() {
+        var countries = ['CSE','CSE-AI','CSE-CYS','EEE','ECE','ME']
+		for (var i = 0; i < countries.length; i++) {
+            var opt = countries[i];
+            var el = document.createElement("option");
+            el.innerHTML = opt;
+            el.value = opt;
+            course.appendChild(el);
+        }}
+        course.addEventListener('invalid', () => {
+            if(course.value === "") {
+                alert('Please Select Course');
+            }
+            });
+	</script>
+</body>
+
+</html>

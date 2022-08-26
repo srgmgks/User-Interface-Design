@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(247, 244, 118);">
+<head>
+	<title>Admit Card</title>
+	<link rel = "icon" href ="https://amrita.edu/wp-content/uploads/2019/05/amrita-new-favicon.ico" type = "image/x-icon">
+
+    <style>
+		input[type=text], input[type=password], input[type=tel], input[type=date],input[type=email],option,select {
+			width: 50%;
+			padding: 15px;
+			margin: 15px;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=date]:focus, input[type=email]:focus {
+			background-color: #ddd;
+			outline: none;
+		}
+		button[name='login']{
+			background-color: rgb(52, 52, 211);
+		}
+		button{
+			background-color: #404407;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 15px;
+			text-align: center;
+		}
+		
+		td{
+			width: 300px;
+		}
+		table{
+			background-color: rgb(110, 218, 137);
+			opacity: 0.90;
+			border-radius: 10px;
+			padding: 15px;
+		}
+		html { 
+            background: url(https://www.w3schools.com/howto/img_girl.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+	</style>
+</head>
+
+<body style="font-size: 20px;">
+	<br>
+    <br>
+	<center>
+        <img src="1.png" height="168" width="613"></img>
+	    <br>
+        <br>
+		<form action="ht.php" method="POST">
+			<table>
+                <td>
+                    <center><div id="C1"><b style="font-size: 20px;">Enter E-mail ID to view your Admit Card</b><br><br></div></center>
+                </td>
+				<tr>
+					<td>
+						<label for="email"><b>Email</b></label>
+                    <br>
+						<input type="email" placeholder="Please Enter E-mail ID" name="email" id="email" required>
+					</td>
+				</tr>
+		    </table>
+		<br>
+			<center><button type="submit" name="submit" value="submit">View Admit Card</button></center>
+			<br>
+            <br>
+	    </form>
+	<br>
+    <br>
+	</center>
+	
+</body>
+
+</html>

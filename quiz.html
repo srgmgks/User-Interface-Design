@@ -1,0 +1,370 @@
+<html>
+<head>
+    <title>Quiz</title>
+	<link rel = "icon" href ="https://amrita.edu/wp-content/uploads/2019/05/amrita-new-favicon.ico" type = "image/x-icon">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
+</head>
+<body>
+    <div id="Page1">
+        <p id="demo1" name="time"></p>
+        <h1> Quiz </h1>
+        <h2>
+        <div class="q">
+            Question 1 of 5 <br> (1 Points)
+        </div>
+        </h2>
+        <h2>
+        <div class="q1">
+            Certificate signing request is sent by __________
+            <br><br>
+            <input type="radio" id="1a" name="q1" value="Client" style="height:15px; width:15px"><label for="1a">Client</label><br>
+            <input type="radio" id="1b" name="q1" value="Server" style="height:15px; width:15px"><label for="1b">Server</label><br>
+            <input type="radio" id="1c" name="q1" value="CA" style="height:15px; width:15px"><label for="1c">CA</label><br>
+            <input type="radio" id="1d" name="q1" value="None of the above" style="height:15px; width:15px"><label for="1d">None of the above</label>
+            <br><br> 
+        </div>
+        </h2>
+        <button href="#" onclick="result1();return show('Page2','Page1')">Next</button>
+        <button id="save1" href="#" onclick="save()" name="save">Save</button><br><center><div class="p1"></div></center>
+    </div>
+    <div id="Page2" style="display:none">
+        <p id="demo2"  name="time"></p>
+        <h1> Quiz </h1>
+        <h2>
+        <div class="q">
+            Question 2 of 5 <br> (1 Points)
+        </div>
+        </h2>
+        <h2>
+        <div class="q2">
+            What is the preferred way by which an attacker asks for money after a ransomware attack?
+            <br><br>
+            <input type="radio" id="2a" name="q2" value="Cash" style="height:15px; width:15px"><label for="2a">Cash</label><br>
+            <input type="radio" id="2b" name="q2" value="Transfer to bank account" style="height:15px; width:15px"><label for="2b">Transfer to bank account</label><br>
+            <input type="radio" id="2c" name="q2" value="Cryptocurrency" style="height:15px; width:15px"><label for="2c">Cryptocurrency</label><br>
+            <input type="radio" id="2d" name="q2" value="Any of the above" style="height:15px; width:15px"><label for="2d">Any of the above</label>
+            <br><br> 
+        </div>
+        </h2>
+        <button href="#" onclick="return show('Page1','Page2');">Previous</button>
+        <button href="#" onclick="result2();return show('Page3','Page2');">Next</button>
+        <button id="save2" href="#" onclick="save()" name="save">Save</button><br><center><div class="p2"></div></center>
+    </div>
+    <div id="Page3" style="display:none">
+        <p id="demo3"  name="time"></p>
+        <h1> Quiz </h1>
+        <h2>
+        <div class="q">
+            Question 3 of 5 <br> (1 Points)
+        </div>
+        </h2>
+        <h2>
+        <div class="q3">
+            Which of the below, a malware cannot do?
+            <br><br>
+            <input type="radio" id="3a" name="q3" value="Modifying or deleting a file" style="height:15px; width:15px"><label for="3a">Modifying or deleting a file</label><br>
+            <input type="radio" id="3b" name="q3" value="Encrypting a file" style="height:15px; width:15px"><label for="3b">Encrypting a file</label><br>
+            <input type="radio" id="3c" name="q3" value="Giving remote access to attacker" style="height:15px; width:15px"><label for="3c">Giving remote access to attacker</label><br>
+            <input type="radio" id="3d" name="q3" value="None of the above" style="height:15px; width:15px"><label for="3d">None of the above</label>
+            <br><br> 
+        </div>
+        </h2>
+        <button href="#" onclick="return show('Page2','Page3');">Previous</button>
+        <button href="#" onclick="result3();return show('Page4','Page3');">Next</button>
+        <button id="save3" href="#" onclick="save()" name="save">Save</button><br><center><div class="p3"></div></center>
+    </div>
+    <div id="Page4" style="display:none">
+        <p id="demo4"  name="time"></p>
+        <h1> Quiz </h1>
+        <h2>
+        <div class="q">
+            Question 4 of 5 <br> (1 Points)
+        </div>
+        </h2>
+        <h2>
+        <div class="q4">
+            Which of the following is used to manipulate a malware so that it is harder for security program 
+            to detect it?
+            <br><br>
+            <input type="radio" id="4a" name="q4" value="Trojan" style="height:15px; width:15px"><label for="4a">Trojan</label><br>
+            <input type="radio" id="4b" name="q4" value="Rootkit" style="height:15px; width:15px"><label for="4b">Rootkit</label><br>
+            <input type="radio" id="4c" name="q4" value="Crypter" style="height:15px; width:15px"><label for="4c">Crypter</label><br>
+            <input type="radio" id="4d" name="q4" value="Spyware" style="height:15px; width:15px"><label for="4d">Spyware</label>
+            <br><br> 
+        </div>
+        </h2>
+        <button href="#" onclick="return show('Page3','Page4');">Previous</button>
+        <button href="#" onclick="result4();return show('Page5','Page4');">Next</button>
+        <button id="save4" href="#" onclick="save()" name="save">Save</button><br><center><div class="p4"></div></center>
+    </div>
+    <div id="Page5" style="display:none">
+        <p id="demo5"  name="time"></p>
+        <h1> Quiz </h1>
+        <h2>
+        <div class="q">
+            Question 5 of 5 <br> (1 Points)
+        </div>
+        </h2>
+        <h2>
+        <div class="q5">
+            'A' in CIA stands for.
+            <br><br>
+            <input type="radio" id="5a" name="q5" value="Authentication" style="height:15px; width:15px"><label for="5a">Authentication</label><br>
+            <input type="radio" id="5b" name="q5" value="Authorization" style="height:15px; width:15px"><label for="5b">Authorization</label><br>
+            <input type="radio" id="5c" name="q5" value="Availability" style="height:15px; width:15px"><label for="5c">Availability</label><br>
+            <input type="radio" id="5d" name="q5" value="None of these" style="height:15px; width:15px"><label for="5d">None of these</label>
+            <br><br> 
+        </div>
+        </h2>
+        <button href="#" onclick="return show('Page4','Page5');">Previous</button>
+        <button href="#" onclick="result5();return show('Page6','Page5');">Submit</button>
+        <button id="save5" href="#" onclick="save()" name="save">Save</button><br><center><div class="p5"></div></center>
+    </div>
+    <div id="Page6" style="display:none">
+        <h1> <b style="color:#0000b3;">Submission </b></h1>
+        <hr>
+        <h2><p style="color:#ff3333;">Cyber Security Quiz</p></h2>
+        <hr>
+        <h2><p style="color:#00e600;">Thank You, your assessment has been successfully submitted.</p></h2>
+        <hr>
+        <table style="width:100%">
+            <tr>
+                <td> <b> Course Name </b> </td>
+                <td>Cyber Security Essentials</td>
+            </tr>
+            <tr>
+                <td> <b> Confirmation Number </b> </td>
+                <td>5483</td>
+            </tr>
+            <tr>
+                <td> <b> Submitted </b> </td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td> <b> Marks Obtained </b> </td>
+                <td id="mark" style="color: green; font-size: 40px;"></td>
+            </tr>
+        </table>
+        <hr><br><hr><br><hr>
+        <style>
+            table, th, td {
+                border:8px Groove blue;
+                font-size: 30px;
+            }
+        </style>
+        <!---<button href="#" onclick="return show('Page5','Page6');">Previous</button>--->
+    </div>
+    <div id="Page7" style="display:none">
+        <h1> <b style="color:#0000b3;">Submission </b></h1>
+        <hr>
+        <h2><p style="color:#ff3333;">Cyber Security Quiz</p></h2>
+        <hr>
+        <h2><p style="color:#00e600;">Time is up!!!!<br> Your assessment has been automatically submitted.</p></h2>
+        <hr>
+        <table style="width:100%">
+            <tr>
+                <td> <b> Course Name </b> </td>
+                <td>Cyber Security Essentials</td>
+            </tr>
+            <tr>
+                <td> <b> Confirmation Number </b> </td>
+                <td>5483</td>
+            </tr>
+            <tr>
+                <td> <b> Submitted </b> </td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td> <b> Marks Obtained </b> </td>
+                <td id="mark1" style="color: green; font-size: 40px;"></td>
+            </tr>
+        </table>
+        <hr><br><hr><br><hr>
+        <style>
+            table, th, td {
+                border:8px Groove blue;
+                font-size: 30px;
+            }
+        </style>
+    </div>
+    <script>
+        function show(shown, hidden) {
+            document.getElementById(shown).style.display='block';
+            document.getElementById(hidden).style.display='none';
+            return false;
+        }
+        var m=5;
+        var currentDate = new Date();
+        var countDownDate = new Date(currentDate.getTime() + m*60000);
+        //var countDownDate = new Date("Nov 28, 2021 18:31:00").getTime();
+        var x = setInterval(
+            function() 
+            {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("demo1").innerHTML = minutes + "m " + seconds + "s ";
+                document.getElementById("demo2").innerHTML = minutes + "m " + seconds + "s ";
+                document.getElementById("demo3").innerHTML = minutes + "m " + seconds + "s ";
+                document.getElementById("demo4").innerHTML = minutes + "m " + seconds + "s ";
+                document.getElementById("demo5").innerHTML = minutes + "m " + seconds + "s ";
+                if (distance < 0) 
+                {
+                    clearInterval(x);
+                    document.getElementById("Page1").style.display='none';
+                    document.getElementById("Page2").style.display='none';
+                    document.getElementById("Page3").style.display='none';
+                    document.getElementById("Page4").style.display='none';
+                    document.getElementById("Page5").style.display='none';
+                    document.getElementById("Page6").style.display='none';
+                    document.getElementById("Page7").style.display='block';
+                    return false;
+                }
+            }, 1000);
+            
+            function result1()
+            {
+                var mark=0;
+                if (document.getElementById("1b").checked){
+                    mark=mark+1;
+                }
+                else if( (document.getElementById("1a").checked) || (document.getElementById("1c").checked) || (document.getElementById("1d").checked) ){
+                    mark=mark+0;
+                }
+                document.getElementById("mark").innerHTML=mark;
+                document.getElementById("mark1").innerHTML=mark+" out of 5";
+            }
+            function result2(){
+                var mark = parseInt(document.getElementById("mark").innerHTML);
+                if (document.getElementById("2c").checked){
+                    mark=mark+1;
+                }
+                else if( (document.getElementById("2b").checked) || (document.getElementById("2a").checked) || (document.getElementById("2d").checked) ){
+                    mark=mark+0;
+                }
+                document.getElementById("mark").innerHTML=mark;
+                document.getElementById("mark1").innerHTML=mark+" out of 5";
+            }
+            function result3(){
+                var mark = parseInt(document.getElementById("mark").innerHTML);
+                if (document.getElementById("3d").checked){
+                    mark=mark+1;
+                }
+                else if( (document.getElementById("3b").checked) || (document.getElementById("3c").checked) || (document.getElementById("3a").checked) ){
+                    mark=mark+0;
+                }
+                document.getElementById("mark").innerHTML=mark;
+                document.getElementById("mark1").innerHTML=mark+" out of 5";
+            }
+            function result4(){ 
+                var mark = parseInt(document.getElementById("mark").innerHTML);
+                if (document.getElementById("4c").checked){
+                    mark=mark+1;
+                }
+                else if( (document.getElementById("4b").checked) || (document.getElementById("4a").checked) || (document.getElementById("4d").checked) ){
+                    mark=mark+0;
+                }
+                document.getElementById("mark").innerHTML=mark;
+                document.getElementById("mark1").innerHTML=mark+" out of 5";
+            }
+            function result5(){ 
+                var mark = parseInt(document.getElementById("mark").innerHTML);
+                if (document.getElementById("5c").checked){
+                    mark=mark+1;
+                }
+                else if( (document.getElementById("5b").checked) || (document.getElementById("5a").checked) || (document.getElementById("5d").checked) ){
+                    mark=mark+0;
+                }
+                document.getElementById("mark").innerHTML=mark+" out of 5";
+                document.getElementById("mark1").innerHTML=mark+" out of 5";
+            }
+            function save() {
+                result1();
+                result2();
+                result3();
+                result4();
+                result5();
+            }
+            $(document).ready(function()  
+            {
+                $("#save1").click(function()  
+                {  
+                    $(".p1").html("Your Answer has been saved");  
+                });
+                $("#save2").click(function()  
+                {  
+                    $(".p2").html("Your Answer has been saved");  
+                });
+                $("#save3").click(function()  
+                {  
+                    $(".p3").html("Your Answer has been saved");  
+                });
+                $("#save4").click(function()  
+                {  
+                    $(".p4").html("Your Answer has been saved");  
+                });
+                $("#save5").click(function()  
+                {  
+                    $(".p5").html("Your Answer has been saved");  
+                });
+            });
+    </script>
+    <style>
+        body{
+            background-color: #ffff99;
+        }
+        p[name="time"] {
+            background-color: #00ff00;
+            border: 15px solid black;
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+            border-radius: 10px;
+        }
+        .q {
+            background-color: #ccccb3;
+            border: 15px solid black;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }  
+        .q1,.q2,.q3,.q4,.q5 {
+            background-color: #cbb3ff;
+            border: 15px solid black;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }  
+        button {
+            background-color: Black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover{
+            cursor: pointer;
+            background: rgb(224, 12, 12);
+            color: beige;
+            width: auto;
+        }
+        .p1,.p2,.p3,.p4,.p5{
+            width: fit-content;
+            background-color: #ecb337;
+            font-size: 25px;
+            font-weight: bolder;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</body>
+</html>
